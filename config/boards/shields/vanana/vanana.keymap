@@ -109,7 +109,7 @@
                 &trans      &trans      &trans      &trans      &trans      &trans                      &trans      &kp HOME    &kp UARW    &kp DEL     &kp END     &kp DOLLAR
                 &trans      &trans      &trans      &trans      &trans      &trans      &kp C_VOL_UP    &kp BSPC    &kp LARW    &kp DARW    &kp RARW    &kp APOS    &trans 
                 &trans      &trans      &trans      &trans      &trans      &trans      &kp C_VOL_DN    &trans      &trans      &trans      &trans      &trans      &kp DQT 
-                            &trans      &trans      &trans      &mo ADJUST  &trans                      &trans      &trans      &trans      &trans      &trans
+                            &trans      &trans      &trans      &mo ADJUST  &kp BSPC                    &kp DEL         &trans      &trans      &trans      &trans
             >;
             
         };
