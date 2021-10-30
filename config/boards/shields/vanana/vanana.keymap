@@ -36,11 +36,11 @@
 // -------------------------------------------               -------------------------------------------
 // | Tab  |   Q  |   W  |   F  |   P  |   G  |               |   J  |   L  |   U  |   Y  |   ;  |  '   |
 // -------------------------------------------   ---------  --------------------------------------------
-// | Ctrl |   A  |   R  |   S  |   T  |   D  |   | Right |   |   H  |   N  |   E  |   I  |   O  | Enter|
+// | Ctrl |   A  |   R  |   S  |   T  |   D  |   | PGup  |   |   H  |   N  |   E  |   I  |   O  | Enter|
 // -------------------------------------------   ---------   -------------------------------------------
-// | Shift|   Z  |   X  |   C  |   V  |   B  |   | LEFT  |   |   K  |   M  |   ,  |   .  |   /  | Shift|
+// | Shift|   Z  |   X  |   C  |   V  |   B  |   | PGdwn |   |   K  |   M  |   ,  |   .  |   /  | Shift|
 // -------------------------------------------   ---------   -------------------------------------------
-//        | Ctrl | GUI  |  Alt |Lower |Space |               |Space |Raise |Alt   | DOWN | UP   |
+//        | Ctrl | GUI  |  Alt |Lower |Space |               |Space |Raise |Alt   | RGUI | RCtl |
 //        ------------------------------------               ------------------------------------
 // 
 
@@ -52,9 +52,9 @@
             bindings = <
                 &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4    &kp N5                    &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp GRAV
                 &kp TAB     &kp Q       &kp W       &kp F       &kp P     &kp G                     &kp J       &kp L       &kp U       &kp Y       &kp SCLN    &kp SQT
-                &kp LCTL    &kp A       &kp R       &kp S       &kp T     &kp D         &kp RARW    &kp H       &kp N       &kp E       &kp I       &kp O       &kp RET
-                &kp LSFT    &kp Z       &kp X       &kp C       &kp V     &kp B         &kp LARW    &kp K       &kp M       &kp CMMA    &kp DOT     &kp FSLH    &kp RSFT
-                            &kp LGUI    &kp LALT    &kp LCTL    &mo LOWER &kp SPC                   &kp SPC     &mo RAISE   &kp RALT    &kp DARW    &kp UARW
+                &kp LCTL    &kp A       &kp R       &kp S       &kp T     &kp D         &kp PG_UP   &kp H       &kp N       &kp E       &kp I       &kp O       &kp RET
+                &kp LSFT    &kp Z       &kp X       &kp C       &kp V     &kp B         &kp PG_DN   &kp K       &kp M       &kp CMMA    &kp DOT     &kp FSLH    &kp RSFT
+                            &kp LGUI    &kp LALT    &kp LCTL    &mo LOWER &kp SPC                   &kp SPC     &mo RAISE   &kp RALT    &kp RGUI    &kp RCTL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT>;
         };
