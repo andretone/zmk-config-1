@@ -10,12 +10,12 @@
 #include <dt-bindings/zmk/rgb.h>
 
 // custom keycode defs for easier access
-#define DEFAULT 0
+#define COLEMAK 0
 #define MOD     1
-#define MAC     2
-#define LOWER   3
-#define RAISE   4
-#define ADJUST  5
+//#define MAC     2
+#define LOWER   2
+#define RAISE   3
+#define ADJUST  4
 
 // / {
 //     behaviors {
@@ -32,13 +32,13 @@
 
 // BASE
 // -------------------------------------------               -------------------------------------------
-// |   `  |   1  |   2  |   3  |   4  |   5  |               |   6  |   7  |   8  |   9  |   0  | Bksp |
+// | Esc  |   1  |   2  |   3  |   4  |   5  |               |   6  |   7  |   8  |   9  |   0  | Bksp |
 // -------------------------------------------               -------------------------------------------
-// | Tab  |   Q  |   W  |   E  |   R  |   T  |               |   Y  |   U  |   I  |   O  |   P  | Del  |
+// | Tab  |   Q  |   W  |   F  |   P  |   G  |               |   J  |   L  |   U  |   Y  |   ;  |  `   |
 // -------------------------------------------   ---------  --------------------------------------------
-// | Esc  |   A  |   S  |   D  |   F  |   G  |   | Right |   |   H  |   J  |   K  |   L  |   ;  |Enter |
+// | Ctrl |   A  |   R  |   S  |   T  |   D  |   | Right |   |   H  |   N  |   E  |   I  |   O  |Enter |
 // -------------------------------------------   ---------   -------------------------------------------
-// | Shift|   Z  |   X  |   C  |   V  |   B  |   | LEFT  |   |   N  |   M  |   ,  |   .  |   /  | "    |
+// | Shift|   Z  |   X  |   C  |   V  |   B  |   | LEFT  |   |   K  |   M  |   ,  |   .  |   /  | Shift|
 // -------------------------------------------   ---------   -------------------------------------------
 //        | Ctrl | GUI  |  Alt |Lower |Space |               |Space |Raise |Alt   | DOWN | UP   |
 //        ------------------------------------               ------------------------------------
@@ -48,16 +48,27 @@
     keymap {
         compatible = "zmk,keymap";
 
-        default_layer {
+        colemak_layer {
             bindings = <
-                &kp GRAV    &kp N1      &kp N2      &kp N3      &kp N4    &kp N5                    &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp BKSP
-                &kp TAB     &kp Q       &kp W       &kp E       &kp R     &kp T                     &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSLH
-                &kp ESC     &kp A       &kp S       &kp D       &kp F     &kp G         &kp RARW    &kp H       &kp J       &kp K       &kp L       &kp SCLN    &kp RET
-                &kp LSFT    &kp Z       &kp X       &kp C       &kp V     &kp B         &kp LARW    &kp N       &kp M       &kp CMMA    &kp DOT     &kp FSLH    &mt RSFT SQT
+                &kp ESC     &kp N1      &kp N2      &kp N3      &kp N4    &kp N5                    &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp BKSP
+                &kp TAB     &kp Q       &kp W       &kp F       &kp P     &kp G                     &kp Y       &kp L       &kp U       &kp Y       &kp SCLN    &kp GRAV
+                &kp LCTL    &kp A       &kp R       &kp S       &kp T     &kp D         &kp RARW    &kp H       &kp N       &kp E       &kp I       &kp O       &kp RET
+                &kp LSFT    &kp Z       &kp X       &kp C       &kp V     &kp B         &kp LARW    &kp K       &kp M       &kp CMMA    &kp DOT     &kp FSLH    &kp RSFT
                             &kp LGUI    &kp LALT    &kp LCTL    &mo LOWER &kp SPC                   &kp SPC     &mo RAISE   &kp RALT    &kp DARW    &kp UARW
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT>;
         };
+
+//        default_layer {
+//            bindings = <
+//                &kp GRAV    &kp N1      &kp N2      &kp N3      &kp N4    &kp N5                    &kp N6      &kp N7      &kp N8      &kp N9      &kp N0      &kp BKSP
+//                &kp TAB     &kp Q       &kp W       &kp E       &kp R     &kp T                     &kp Y       &kp U       &kp I       &kp O       &kp P       &kp BSLH
+//                &kp ESC     &kp A       &kp S       &kp D       &kp F     &kp G         &kp RARW    &kp H       &kp J       &kp K       &kp L       &kp SCLN    &kp RET
+//                &kp LSFT    &kp Z       &kp X       &kp C       &kp V     &kp B         &kp LARW    &kp N       &kp M       &kp CMMA    &kp DOT     &kp FSLH    &mt RSFT SQT
+//                            &kp LGUI    &kp LALT    &kp LCTL    &mo LOWER &kp SPC                   &kp SPC     &mo RAISE   &kp RALT    &kp DARW    &kp UARW
+//            >;
+//            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT>;
+//        };
 
         mod_layer {
             bindings = <
@@ -70,16 +81,16 @@
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT>;
         };
 
-        mac_layer {
-            bindings = <
-                &trans      &trans      &trans      &trans      &trans      &trans                  &trans      &trans      &trans      &trans      &trans      &trans  
-                &trans      &trans      &trans      &trans      &trans      &trans                  &trans      &trans      &trans      &trans      &trans      &trans
-                &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
-                &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans 
-                            &kp LCTL    &kp LALT    &kp LGUI    &trans      &trans                  &trans      &trans      &kp RGUI    &trans      &trans
-            >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT>;
-        };
+//        mac_layer {
+//            bindings = <
+//                &trans      &trans      &trans      &trans      &trans      &trans                  &trans      &trans      &trans      &trans      &trans      &trans  
+//                &trans      &trans      &trans      &trans      &trans      &trans                  &trans      &trans      &trans      &trans      &trans      &trans
+//                &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
+//                &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans 
+//                            &kp LCTL    &kp LALT    &kp LGUI    &trans      &trans                  &trans      &trans      &kp RGUI    &trans      &trans
+//            >;
+//            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT>;
+//        };
 
         lower_layer {
             bindings = <
