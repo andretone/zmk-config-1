@@ -65,7 +65,7 @@
                 &kp ESC       &kp RS(N1)  &kp RS(N2)  &kp RS(N3)  &kp RS(N4) &kp RS(N5)                &kp LS(N6)  &kp LS(N7)  &kp LS(N8)  &kp LS(N9)  &kp LS(N0)  &kp GRAV
                 &kp TAB       &kp Q       &kp W       &kp F       &kp P      &kp G                     &kp J       &kp L       &kp U       &kp Y       &kp SCLN    &kp GRAV
                 &th_hold LCTL ESC &kp A       &kp R       &kp S       &kp T      &kp D         &kp PG_UP   &kp H       &kp N       &kp E       &kp I       &kp O       &kp SQT
-                &kp LSFT      &kp Z       &kp X       &kp C       &kp V      &kp B         &kp PG_DN   &kp K       &kp M       &kp CMMA    &kp DOT     &kp FSLH    &th_hold RET RSFT
+                &kp LSFT      &kp Z       &kp X       &kp C       &kp V      &kp B         &kp PG_DN   &kp K       &kp M       &kp CMMA    &kp DOT     &kp FSLH    &th_hold RSFT RET
                               &kp LGUI    &kp LALT    &kp LCTL    &mo LOWER  &kp SPC                   &kp SPC     &mo RAISE   &kp RALT    &kp RGUI    &kp RCTL
             >;
             sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT>;
