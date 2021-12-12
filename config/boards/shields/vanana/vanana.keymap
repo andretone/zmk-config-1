@@ -112,7 +112,7 @@
 // -------------------------------------------   ---------   -------------------------------------------
 // |      |      |      |      |      |      |   |       |   |      |  _   |  =   |  {   |  }   |  |   |
 // -------------------------------------------   ---------   -------------------------------------------
-//        |      |      |      |      |      |               |      |      |      |      |      |
+//        |      |      |      |      |  x   |               |      |      |      |      |      |
 //        ------------------------------------               ------------------------------------
 //
         lower_layer {
@@ -121,7 +121,7 @@
                 &trans      &trans      &trans      &trans      &trans      &trans                  &trans      &trans      &trans      &kp LPAR    &kp RPAR    &trans
                 &trans      &trans      &trans      &trans      &trans      &trans     &kp MINUS   &kp UARW    &kp PIPE    &kp MINUS   &kp PLUS    &kp LBKT    &kp RBKT    &kp BSLH
                 &trans      &trans      &trans      &trans      &trans      &trans     &kp UNDER   &kp DARW    &kp GRAV    &kp UNDER   &kp EQUAL   &kp LBRC    &kp RBRC    &kp PIPE
-                            &trans      &trans      &trans      &trans      &trans                &kp DEL     &mo ADJUST  &trans      &trans      &trans
+                            &trans      &trans      &trans      &trans      &kp BSPC               &kp DEL     &mo ADJUST  &trans      &trans      &trans
             >;
         };
 
