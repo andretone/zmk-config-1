@@ -68,7 +68,6 @@
                 &kp LSFT      &kp Z       &kp X       &kp C       &kp D      &kp V         &kp PG_DN   &kp K       &kp H       &kp CMMA    &kp DOT     &kp FSLH    &mt RSFT RET
                               &kp LGUI    &kp LALT    &kp LCTL    &mo LOWER  &kp SPC                   &kp SPC     &mo RAISE   &kp RALT    &kp RGUI    &kp RCTL
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT>;
         };
 
 //        default_layer {
@@ -90,7 +89,6 @@
                 &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans      &trans
                             &trans      &trans      &trans      &trans      &kp BSPC                &kp DEL     &trans      &trans      &trans      &trans
             >;
-            sensor-bindings = <&inc_dec_kp C_VOL_DN C_VOL_UP &inc_dec_kp LEFT RIGHT>;
         };
 
 //        mac_layer {
@@ -125,7 +123,6 @@
                 &trans      &trans      &trans      &trans      &trans      &trans     &kp UNDER   &kp DARW    &kp GRAV    &kp UNDER   &kp EQUAL   &kp LBRC    &kp RBRC    &kp PIPE
                             &trans      &trans      &trans      &trans      &trans                &kp DEL     &mo ADJUST  &trans      &trans      &trans
             >;
-            sensor-bindings = <&inc_dec_trans RIGHT &inc_dec_kp C_VOL_DN C_VOL_UP>;
         };
 
 // Raise layer
